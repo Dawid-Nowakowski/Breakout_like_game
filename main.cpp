@@ -1,39 +1,40 @@
-#include <SDL.h>
 #include <iostream>
+#define SDL_MAIN_HANDLED
+#include <SDL.h>
+
+#include "Color.h"
+#include "Screen.h"
+#include "Line2D.h"
+#include "Vec2D.h"
+
+const int SCREEN_WIDTH = 224;
+const int SCREEN_HEIGHT = 288;
+const int MAGNIFICATION = 3;
+
 using namespace std;
 
-int main( int argc, char* args[] ) {
+int main(int argc, const char * argv[]){
+    Screen theScreen;
 
-    SDL_Init( SDL_INIT_EVERYTHING );  // Inicjalizacja wszystkich systemów SDL
-    SDL_Window *window;  // Wskaźnik do okna SDL
-    SDL_Renderer *renderer;  // Wskaźnik do renderera SDL
-    if (auto error = SDL_CreateWindowAndRenderer( 640, 480,
-                                                  SDL_WINDOW_SHOWN, &window, &renderer )) {
-        cout << "Nie udalo sie utworzyc okienka" << endl;
-    }
-    SDL_Event event;  // Zmienna do przechowywania zdarzeń SDL
-    int playing = 1;  // Flaga sterująca pętlą gry
-    while (playing) {  // Pętla gry
-        while (SDL_PollEvent(&event)) {  // Obsługa zdarzeń SDL
-            switch (event.type)
-            {
-                case SDL_QUIT:  // Jeśli użytkownik zamknie okno
-                    playing = false;  // Ustawienie flagi końca gry
-                    break;
-                default:
-                    cout << event.type << endl;  // Wypisanie typu zdarzenia na standardowe wyjście
+    theScreen.Init(SCREEN_WIDTH, SCREEN_HEIGHT, MAGNIFICATION);
+
+    Line2D line = {Vec2D(0, 0), Vec2D(SCREEN_WIDTH, SCREEN_HEIGHT)};
+
+    theScreen.Draw(line, Color::Pink());
+    theScreen.SwapScreens();
+
+    SDL_Event sdlEvent;
+    bool running = true;
+
+    while(running){
+        while(SDL_PollEvent(&sdlEvent)){
+            switch (sdlEvent.type){
+                case SDL_QUIT:
+                    running = false;
                     break;
             }
         }
-        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);  // Ustawienie koloru rysowania na czarny (tło)
-        SDL_RenderClear(renderer);  // Czyszczenie rendera tj. rysowanie tła
-        SDL_SetRenderDrawColor(renderer, 255, 128, 200, 255);  // Ustawienie koloru rysowania na różowy
-        SDL_RenderDrawLine(renderer,
-                           0, 0, 640, 480);  // Narysowanie linii od lewego górnego do prawego dolnego rogu okna
-        SDL_RenderPresent(renderer);  // wyświetlenie wyrenderowanego obrazu
     }
-    SDL_DestroyRenderer( renderer );  // Zniszczenie renderera
-    SDL_DestroyWindow( window );  // Zniszczenie okna
-    SDL_Quit();
+
     return 0;
 }
