@@ -30,9 +30,9 @@ public:
     void Draw(int x, int y, const Color& color); // Rysowanie piksela we współrzędnych
     void Draw(const Vec2D& point, const Color& color); // -//- piksela w punkcie
     void Draw(const Line2D& line, const Color& color); // -//- linii
-    void Draw(const Triangle& triangle, const Color& color);
-    void Draw(const AARectangle& rect, const Color& color);
-    void Draw(const Circle& circle, const Color& color);
+    void Draw(const Triangle& triangle, const Color& color, bool fill = false, const Color& fillColor = Color::White());
+    void Draw(const AARectangle& rect, const Color& color, bool fill = false, const Color& fillColor = Color::White());
+    void Draw(const Circle& circle, const Color& color, bool fill = false, const Color& fillColor = Color::White());
 
 private:
     Screen(const Screen& screen); // Prywatna kopia konstruktora

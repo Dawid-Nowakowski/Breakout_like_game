@@ -26,9 +26,9 @@ int main(int argc, const char * argv[]){
     AARectangle rect = {Vec2D(SCREEN_WIDTH/2 - 25, SCREEN_HEIGHT/2 -25), 50, 50};
     Circle circle = {Vec2D(SCREEN_WIDTH/2 + 50, SCREEN_HEIGHT/2 + 50), 50};
 
-    theScreen.Draw(circle, Color::Blue());
-    theScreen.Draw(rect, Color::Magenta());
-    theScreen.Draw(triangle, Color::Green());
+    theScreen.Draw(circle, Color::Blue(), true, Color::Blue());
+    theScreen.Draw(rect, Color::Magenta(), true, Color::Magenta());
+    theScreen.Draw(triangle, Color::Green(), true, Color::Green());
     theScreen.Draw(line, Color::Pink());
     theScreen.SwapScreens();
 
