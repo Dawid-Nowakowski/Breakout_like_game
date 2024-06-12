@@ -94,3 +94,19 @@ uint8_t Color::GetAlpha() const{
     SDL_GetRGBA(mColor, mFormat, &r, &g, &b, &a);
     return a;
 }
+
+Color Color::Evaluate1MinueSourceAlpha(const Color& source, const Color& destination) { // obliczanie nowego koloru
+    uint8_t alpha = source.GetAlpha();
+
+    float sourceAlpha = float(alpha) / 255.0f; // Konwersja wartości alpha na zakres [0.0, 1.0].
+    float destAlpha = 1.0f - sourceAlpha; // Obliczenie przezroczystości koloru docelowgo.
+
+    Color outColor; // kolor rezultatu
+
+    outColor.SetAlpha(255);
+    outColor.SetRed(float(source.GetRed()) * sourceAlpha + destination.GetRed() * destAlpha);
+    outColor.SetGreen(float(source.GetGreen()) * sourceAlpha + destination.GetGreen() * destAlpha);
+    outColor.SetBlue(float(source.GetBlue()) * sourceAlpha + destination.GetBlue() * destAlpha);
+
+    return outColor;
+}

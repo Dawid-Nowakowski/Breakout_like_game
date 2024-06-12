@@ -116,6 +116,38 @@ build CMakeFiles\untitled.dir\Shapes\Line2D.cpp.obj: CXX_COMPILER__untitled_Debu
   TARGET_COMPILE_PDB = CMakeFiles\untitled.dir\
   TARGET_PDB = untitled.pdb
 
+build CMakeFiles\untitled.dir\Shapes\Shape.cpp.obj: CXX_COMPILER__untitled_Debug C$:\Users\023da\OneDrive\Pulpit\Dawid$ Nowakowski\Studia\Semestr$ VI\SGD\project\Shapes\Shape.cpp || cmake_object_order_depends_target_untitled
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++17
+  INCLUDES = -I"C:\Users\023da\OneDrive\Pulpit\Dawid Nowakowski\Studia\Semestr VI\SGD\project\SDL\include" -I"C:\Users\023da\OneDrive\Pulpit\Dawid Nowakowski\Studia\Semestr VI\SGD\project\Assets" -I"C:\Users\023da\OneDrive\Pulpit\Dawid Nowakowski\Studia\Semestr VI\SGD\project\Graphics" -I"C:\Users\023da\OneDrive\Pulpit\Dawid Nowakowski\Studia\Semestr VI\SGD\project\Shapes" -I"C:\Users\023da\OneDrive\Pulpit\Dawid Nowakowski\Studia\Semestr VI\SGD\project\Utils"
+  OBJECT_DIR = CMakeFiles\untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles\untitled.dir\Shapes
+  TARGET_COMPILE_PDB = CMakeFiles\untitled.dir\
+  TARGET_PDB = untitled.pdb
+
+build CMakeFiles\untitled.dir\Shapes\Triangle.cpp.obj: CXX_COMPILER__untitled_Debug C$:\Users\023da\OneDrive\Pulpit\Dawid$ Nowakowski\Studia\Semestr$ VI\SGD\project\Shapes\Triangle.cpp || cmake_object_order_depends_target_untitled
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++17
+  INCLUDES = -I"C:\Users\023da\OneDrive\Pulpit\Dawid Nowakowski\Studia\Semestr VI\SGD\project\SDL\include" -I"C:\Users\023da\OneDrive\Pulpit\Dawid Nowakowski\Studia\Semestr VI\SGD\project\Assets" -I"C:\Users\023da\OneDrive\Pulpit\Dawid Nowakowski\Studia\Semestr VI\SGD\project\Graphics" -I"C:\Users\023da\OneDrive\Pulpit\Dawid Nowakowski\Studia\Semestr VI\SGD\project\Shapes" -I"C:\Users\023da\OneDrive\Pulpit\Dawid Nowakowski\Studia\Semestr VI\SGD\project\Utils"
+  OBJECT_DIR = CMakeFiles\untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles\untitled.dir\Shapes
+  TARGET_COMPILE_PDB = CMakeFiles\untitled.dir\
+  TARGET_PDB = untitled.pdb
+
+build CMakeFiles\untitled.dir\Shapes\Circle.cpp.obj: CXX_COMPILER__untitled_Debug C$:\Users\023da\OneDrive\Pulpit\Dawid$ Nowakowski\Studia\Semestr$ VI\SGD\project\Shapes\Circle.cpp || cmake_object_order_depends_target_untitled
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++17
+  INCLUDES = -I"C:\Users\023da\OneDrive\Pulpit\Dawid Nowakowski\Studia\Semestr VI\SGD\project\SDL\include" -I"C:\Users\023da\OneDrive\Pulpit\Dawid Nowakowski\Studia\Semestr VI\SGD\project\Assets" -I"C:\Users\023da\OneDrive\Pulpit\Dawid Nowakowski\Studia\Semestr VI\SGD\project\Graphics" -I"C:\Users\023da\OneDrive\Pulpit\Dawid Nowakowski\Studia\Semestr VI\SGD\project\Shapes" -I"C:\Users\023da\OneDrive\Pulpit\Dawid Nowakowski\Studia\Semestr VI\SGD\project\Utils"
+  OBJECT_DIR = CMakeFiles\untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles\untitled.dir\Shapes
+  TARGET_COMPILE_PDB = CMakeFiles\untitled.dir\
+  TARGET_PDB = untitled.pdb
+
+build CMakeFiles\untitled.dir\Shapes\AARectangle.cpp.obj: CXX_COMPILER__untitled_Debug C$:\Users\023da\OneDrive\Pulpit\Dawid$ Nowakowski\Studia\Semestr$ VI\SGD\project\Shapes\AARectangle.cpp || cmake_object_order_depends_target_untitled
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd -std:c++17
+  INCLUDES = -I"C:\Users\023da\OneDrive\Pulpit\Dawid Nowakowski\Studia\Semestr VI\SGD\project\SDL\include" -I"C:\Users\023da\OneDrive\Pulpit\Dawid Nowakowski\Studia\Semestr VI\SGD\project\Assets" -I"C:\Users\023da\OneDrive\Pulpit\Dawid Nowakowski\Studia\Semestr VI\SGD\project\Graphics" -I"C:\Users\023da\OneDrive\Pulpit\Dawid Nowakowski\Studia\Semestr VI\SGD\project\Shapes" -I"C:\Users\023da\OneDrive\Pulpit\Dawid Nowakowski\Studia\Semestr VI\SGD\project\Utils"
+  OBJECT_DIR = CMakeFiles\untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles\untitled.dir\Shapes
+  TARGET_COMPILE_PDB = CMakeFiles\untitled.dir\
+  TARGET_PDB = untitled.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target untitled
@@ -124,7 +156,7 @@ build CMakeFiles\untitled.dir\Shapes\Line2D.cpp.obj: CXX_COMPILER__untitled_Debu
 #############################################
 # Link the executable untitled.exe
 
-build untitled.exe: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles\untitled.dir\main.cpp.obj CMakeFiles\untitled.dir\Utils\Utils.cpp.obj CMakeFiles\untitled.dir\Utils\Vec2D.cpp.obj CMakeFiles\untitled.dir\Graphics\Color.cpp.obj CMakeFiles\untitled.dir\Graphics\Screen.cpp.obj CMakeFiles\untitled.dir\Graphics\ScreenBuffer.cpp.obj CMakeFiles\untitled.dir\Shapes\Line2D.cpp.obj | ..\SDL\lib\x64\SDL2.lib ..\SDL\lib\x64\SDL2main.lib
+build untitled.exe: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles\untitled.dir\main.cpp.obj CMakeFiles\untitled.dir\Utils\Utils.cpp.obj CMakeFiles\untitled.dir\Utils\Vec2D.cpp.obj CMakeFiles\untitled.dir\Graphics\Color.cpp.obj CMakeFiles\untitled.dir\Graphics\Screen.cpp.obj CMakeFiles\untitled.dir\Graphics\ScreenBuffer.cpp.obj CMakeFiles\untitled.dir\Shapes\Line2D.cpp.obj CMakeFiles\untitled.dir\Shapes\Shape.cpp.obj CMakeFiles\untitled.dir\Shapes\Triangle.cpp.obj CMakeFiles\untitled.dir\Shapes\Circle.cpp.obj CMakeFiles\untitled.dir\Shapes\AARectangle.cpp.obj | ..\SDL\lib\x64\SDL2.lib ..\SDL\lib\x64\SDL2main.lib
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = ..\SDL\lib\x64\SDL2.lib  ..\SDL\lib\x64\SDL2main.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib

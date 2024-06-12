@@ -8,13 +8,16 @@
 
 class Vec2D;
 class Line2D;
+class Triangle;
+class AARectangle;
+class Circle;
 struct SDL_Window;
 struct SDL_Surface;
 
 class Screen{
 public:
     Screen();
-    ~Screen(); // destruktora
+    ~Screen(); // destruktor
 
     SDL_Window* Init(uint32_t w, uint32_t h, uint32_t mag); // inicjalizacja ekranu
     void SwapScreens(); // zamiana zawartości ekranu
@@ -27,6 +30,9 @@ public:
     void Draw(int x, int y, const Color& color); // Rysowanie piksela we współrzędnych
     void Draw(const Vec2D& point, const Color& color); // -//- piksela w punkcie
     void Draw(const Line2D& line, const Color& color); // -//- linii
+    void Draw(const Triangle& triangle, const Color& color);
+    void Draw(const AARectangle& rect, const Color& color);
+    void Draw(const Circle& circle, const Color& color);
 
 private:
     Screen(const Screen& screen); // Prywatna kopia konstruktora

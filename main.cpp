@@ -6,6 +6,9 @@
 #include "Screen.h"
 #include "Line2D.h"
 #include "Vec2D.h"
+#include "Triangle.h"
+#include "AARectangle.h"
+#include "Circle.h"
 
 const int SCREEN_WIDTH = 224;
 const int SCREEN_HEIGHT = 288;
@@ -19,7 +22,13 @@ int main(int argc, const char * argv[]){
     theScreen.Init(SCREEN_WIDTH, SCREEN_HEIGHT, MAGNIFICATION);
 
     Line2D line = {Vec2D(0, 0), Vec2D(SCREEN_WIDTH, SCREEN_HEIGHT)};
+    Triangle triangle = {Vec2D(60,10), Vec2D(10,110), Vec2D(110,110)};
+    AARectangle rect = {Vec2D(SCREEN_WIDTH/2 - 25, SCREEN_HEIGHT/2 -25), 50, 50};
+    Circle circle = {Vec2D(SCREEN_WIDTH/2 + 50, SCREEN_HEIGHT/2 + 50), 50};
 
+    theScreen.Draw(circle, Color::Blue());
+    theScreen.Draw(rect, Color::Magenta());
+    theScreen.Draw(triangle, Color::Green());
     theScreen.Draw(line, Color::Pink());
     theScreen.SwapScreens();
 
