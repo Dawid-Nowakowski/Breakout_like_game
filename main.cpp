@@ -27,8 +27,8 @@ int main(int argc, const char * argv[]){
     Circle circle = {Vec2D(SCREEN_WIDTH/2 + 50, SCREEN_HEIGHT/2 + 50), 50};
 
     theScreen.Draw(circle, Color::Blue(), true, Color::Blue());
-    theScreen.Draw(rect, Color::Magenta(), true, Color::Magenta());
-    theScreen.Draw(triangle, Color::Green(), true, Color::Green());
+    theScreen.Draw(rect, Color(100,100,180,100), true, Color(100,100,180,100));
+    theScreen.Draw(triangle, Color(200,100,50,100), true, Color(200,100,50,100));
     theScreen.Draw(line, Color::Pink());
     theScreen.SwapScreens();
 

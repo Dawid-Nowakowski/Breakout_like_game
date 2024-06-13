@@ -35,7 +35,7 @@ SDL_Window *Screen::Init(uint32_t w, uint32_t h,
     if (moptrWindow) { // Sprawdza, czy okno zostało poprawnie utworzone
         mnoptrWindowSurface = SDL_GetWindowSurface(moptrWindow); // Pobiera powierzchnię okna
 
-        SDL_PixelFormat *pixelFormat = mnoptrWindowSurface->format; // Pobiera format pikseli powierzchni okna
+        SDL_PixelFormat *pixelFormat = SDL_AllocFormat(SDL_PIXELFORMAT_RGBA8888); // Pobiera format pikseli powierzchni okna
 
         Color::InitColorFormat(pixelFormat); // Inicjalizuje format koloru
 

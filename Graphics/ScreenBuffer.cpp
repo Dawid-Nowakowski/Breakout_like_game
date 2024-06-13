@@ -56,7 +56,8 @@ void ScreenBuffer::SetPixel(const Color& color, int x, int y){ // Ustawia piksel
         uint32_t * pixels = (uint32_t*)mSurface->pixels; // pobiera wskaźnik do tablicy pikseli
 
         size_t index = GetIndex(y, x);
-        pixels[index] = color.GetPixelColor();
+        Color surfaceColor = Color(pixels[index]);
+        pixels[index] = Color::Evaluate1MinueSourceAlpha(color, surfaceColor).GetPixelColor();
 
         SDL_UnlockSurface(mSurface);
     }
