@@ -3,10 +3,16 @@
   <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$" />
   <component name="CidrRootsConfiguration">
     <sourceRoots>
+      <file path="$PROJECT_DIR$/App" />
       <file path="$PROJECT_DIR$/Graphics" />
+      <file path="$PROJECT_DIR$/Input" />
+      <file path="$PROJECT_DIR$/Scene" />
       <file path="$PROJECT_DIR$/Shapes" />
       <file path="$PROJECT_DIR$/Utils" />
     </sourceRoots>
+    <libraryRoots>
+      <file path="$PROJECT_DIR$/SDL" />
+    </libraryRoots>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
