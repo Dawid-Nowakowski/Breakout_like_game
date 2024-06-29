@@ -1,6 +1,7 @@
 #include <iostream>
 #define SDL_MAIN_HANDLED
 #include <SDL.h>
+#include <iostream>
 #include "App.h"
 
 const int SCREEN_WIDTH = 224;

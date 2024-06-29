@@ -1,0 +1,112 @@
+:level
+
+:block
+:symbol x
+:fillcolor 255 0 0 255
+:hp 3
+
+:width 14
+:height 13
+:layout 13
+
+--xxx---------
+--x-x---------
+--xxx----xxx--
+--x--xx----x--
+--x-x--x---x--
+----xxxx---x--
+----x--x-xx---
+----x--x------
+xxx------x-x--
+-x-------xx---
+-x-------x----
+-x-------xx---
+-x-------x-x--
+
+:level
+
+:block
+:symbol d
+:fillcolor 194 0 0 255
+:hp 1
+
+:block
+:symbol g
+:fillcolor 0 57 194 255
+:hp 2
+
+:block
+:symbol s
+:fillcolor 0 194 13 255
+:hp 3
+
+:width 14
+:height 17
+:layout 17
+
+-ssss---------
+sss-ss--------
+sss-----ggggg-
+-ssss--gg---gg
+---sss-gg-----
+ss-sss-gg--ggg
+-ssss--gg---gg
+-------gg---gg
+--------ggggg-
+--------------
+---dddddd-----
+---dd----dd---
+---dd----dd---
+---dd----dd---
+---dd----dd---
+---dd----dd---
+---ddddddd----
+
+:level
+
+:block
+:symbol z
+:fillcolor 194 0 0 255
+:hp 1
+
+:block
+:symbol x
+:fillcolor 0 57 194 255
+:hp 2
+
+:block
+:symbol c
+:fillcolor 0 194 13 255
+:hp 3
+
+:block
+:symbol v
+:fillcolor 255 233 0 255
+:hp 4
+
+:block
+:symbol b
+:fillcolor 153 0 255 255
+:hp 5
+
+:width 14
+:height 17
+:layout 17
+
+zxcvbzxcvbzxcv
+xcvbzxcvbzxcvb
+cvbzxcvbzxcvbz
+vbzxcvbzxcvbzx
+bzxcvbzxcvbzxc
+zxcvbzxcvbzxcv
+xcvbzxcvbzxcvb
+cvbzxcvbzxcvbz
+vbzxcvbzxcvbzx
+bzxcvbzxcvbzxc
+zxcvbzxcvbzxcv
+xcvbzxcvbzxcvb
+cvbzxcvbzxcvbz
+vbzxcvbzxcvbzx
+bzxcvbzxcvbzxc
+zxcvbzxcvbzxcv
+xcvbzxcvbzxcvb

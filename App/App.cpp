@@ -3,6 +3,8 @@
 #include <SDL.h>
 #include "App.h"
 #include "ArcadeScene.h"
+#include "GameScene.h"
+#include "BreakOut.h"
 #include <cassert>
 
 
@@ -20,6 +22,14 @@ bool App::Init(uint32_t width, uint32_t height, uint32_t mag){
 
     // Dodanie nowo utworzonej sceny do stosu scen
     PushScene(std::move(arcadeScene));
+
+    {
+        std::unique_ptr<BreakOut> breakoutGame = std::make_unique<BreakOut>();
+
+        std::unique_ptr<GameScene> breakoutScene = std::make_unique<GameScene>(std::move(breakoutGame));
+
+        PushScene(std::move(breakoutScene));
+    }
 
     return mnoptrWindow != nullptr;
 }
@@ -58,7 +68,7 @@ void App::Run(){
             mInputController.Update(dt);
 
             Scene* topScene = App::TopScene(); // Pobranie górnej sceny ze stosu scen
-            assert(topScene && "Why don't have a scene?"); // upewnienie, że topScene nie jest pusta
+            assert(topScene); // upewnienie, że topScene nie jest pusta
 
             if(topScene)
             {
@@ -80,7 +90,7 @@ void App::Run(){
 
 void App::PushScene(std::unique_ptr<Scene> scene)
 {
-    assert(scene && "Don't push nullptr");
+    assert(scene);
     if(scene){
         scene->Init();
         mInputController.SetGameController(scene->GetGameController()); // Ustawienie kontrolera gry dla sceny
@@ -108,4 +118,11 @@ Scene* App::TopScene()
         return nullptr;
     }
     return mSceneStack.back().get(); // Zwraca wskaźnik do górnej sceny na stosie
+}
+
+const std::string& App::GetBasePath()
+{
+    static std::string basePath = SDL_GetBasePath();
+
+    return basePath;
 }

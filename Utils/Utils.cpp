@@ -15,3 +15,8 @@ bool IsGreaterThanOrEqual(float x, float y) {
 bool IsLessThanOrEqual(float x, float y) {
     return x < y || IsEqual(x, y); // Zwraca prawdę, jeśli x jest mniejsze od y lub jeśli x jest równe y (z dokładnością do EPSILON)
 }
+
+float MillisecondsToSeconds(unsigned int milliseconds)
+{
+    return static_cast<float>(milliseconds) / 1000.0f;
+}

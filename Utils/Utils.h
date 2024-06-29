@@ -8,5 +8,6 @@ const float TWO_PI = 2.0f * PI;
 bool IsEqual(float x, float y);       // Deklaracja funkcji IsEqual, która sprawdza czy dwie liczby zmiennoprzecinkowe są równe
 bool IsGreaterThanOrEqual(float x, float y); // Deklaracja funkcji IsGreaterThanOrEqual, która sprawdza czy pierwsza liczba jest większa lub równa drugiej
 bool IsLessThanOrEqual(float x, float y); // Deklaracja funkcji IsLessThanOrEqual, która sprawdza czy pierwsza liczba jest mniejsza lub równa drugiej
+float MillisecondsToSeconds(unsigned int milliseconds);
 
 #endif
